@@ -3,7 +3,9 @@ margin: 0;
 padding: 0; 
 }
 
-		
+/* background*/
+
+
 html { 
     background: url(background-image.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -12,15 +14,217 @@ html {
     background-size: cover;
 }
 
-#page-wrap { 
-    width: 400px; 
-    margin: 50px auto; 
-    padding: 20px; 
-    background: white;  
-}
-p { 
-   font: 15px/2 Georgia, Serif; 
-   margin: 0 0 30px 0; 
-   text-indent: 40px; 
+/*Header*/
+
+#sticky-header {
+	position: sticky;
+	top: 0;
+	background-color: rgb(82, 65, 49);
+	padding: 1em;
+	box-shadow: 0 0.25em 0.3em rgba(0, 0, 0, 0.1);
+	z-index: 100;
+    display: flex;
+    justify-content: space-between;
 }
 
+.button-container {
+	display: flex;
+	justify-content: flex-start;
+    gap: 1em; 
+}
+
+.button {
+	display: inline-block;
+	padding: 0.6em 1.25em;
+	background-color: rgb(156, 125, 95);
+	color: rgb(19, 18, 18);
+	border-radius: 1.25em;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+    justify-content: center;
+    text-align: center;
+}
+
+.button:hover {
+	background-color: rgb(58, 53, 49);
+    color: white;
+}
+
+.name-container {
+  color: rgb(231, 219, 40);
+  font-size: 1.25em;
+}
+
+/* page wrap*/
+
+#page-wrap { 
+    width: 60%; 
+    margin: auto auto; 
+    padding: auto; 
+    background: rgba(82, 65, 49, 0.548); 
+    -moz-box-shadow: 0 0 1em black; 
+    -webkit-box-shadow: 0 0 1em black; 
+    box-shadow: 0 0 1em black; 
+    min-width: 320px;
+}
+
+/*section*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*first section*/
+
+.section-one {
+    background-image: url('section-one-background-image.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 50rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-one-content {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* second section */
+
+.section-two {
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .section-two-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+  }
+  
+  .section-two-content h1{
+    color:rgb(89, 187, 8);
+    text-align: center;
+    flex: 1 1;
+    font-size: 1em;
+  }
+
+  .product-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  .product-image img {
+    max-width: 20em;
+  }
+  
+  .buy-now-button {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #E9C315;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+
+/* third section */
+
+.section-three {
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.section-three-content {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 0;
+}
+  
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto; /* add this line to center the video horizontally */
+
+}
+      
+.video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+/*footer*/
+
+footer {
+    background-color: #000000;
+    padding: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links a {
+    color: #ffffff;
+}
+
+.footer-links a:hover {
+    color: #c06e6e;
+}
+
+
+/* media query*/
+
+@media (min-width: 420px) {
+    #page-wrap{
+        padding: 0.6em;
+    }
+    .name-container h2::before {
+        content: "100% ";
+      }
+}
+
+
+@media (min-width: 1240px) {
+    .video-wrapper iframe {
+        width: 60%;
+        height: 60%;
+        top: 10rem;
+    }
+    .video-wrapper {
+        padding-bottom: auto;
+    }
+}
