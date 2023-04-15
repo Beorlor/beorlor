@@ -3,16 +3,27 @@ margin: 0;
 padding: 0; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* background*/
 
 
-html { 
-    background: url(background-image.jpg) no-repeat center center fixed; 
+body {
+    background: url(background-image.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    body {
+      background-size: 100% auto;
+    }
+  }
 
 /*Header*/
 
@@ -84,7 +95,7 @@ html {
     background-image: url('section-one-background-image.jpg');
     background-position: center;
     background-size: cover;
-    height: 50rem;
+    height: 30rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -190,6 +201,8 @@ html {
 footer {
     background-color: #000000;
     padding: 20px;
+    position: fixed;
+    bottom: 0;
 }
 
 .footer-links {
